@@ -1,44 +1,25 @@
-function carritoRevistas() {
-    let cantidadRevistas = prompt("¿Cuantas revistas desea?");
-    
-    alert("Usted a pedido la cantidad de " + cantidadRevistas + " revistas");
+let precioRevistas = 50
+let precioLibros = 200
 
+
+function suma(){
+    let a = prompt("Ingresar la cantidad de revistas que usted quiera")
+
+    let b = prompt("Ingresar la cantidad de revistas que usted quiera")
+        alert ("Usted solcita la cantidad de  " + a +" revistas y de " + b +" libros" );
+
+    let cantidadRevistas = precioRevistas * a;
+    console.log ("el pago debe ser de $ " + cantidadRevistas + " revistas"  );
+
+    let cantidadLibros = precioLibros * b ;
+    console.log("el pago debe ser de $ " + cantidadLibros + " libros");
+
+    let sumaTotal = cantidadRevistas + cantidadLibros;
+    alert("El monto total de pagar es de $ " + sumaTotal)
 
 }
-carritoRevistas();
+suma()
 
-function carritoLibros(){
-    let cantidadLibros = prompt("¿Cuantos libros desea?");
-
-    alert("Usted a pedido la cantidad de " + cantidadLibros + " libros");
-
-}
-carritoLibros   ();
-
-function sumaRevistas() {
-    let precioRevistas = 50 ;
-    let valorRevistas = precioRevistas * carritoRevistas ;
-    return valorRevistas;
-}
-sumaRevistas()
-function sumaLibros() {    
-    let precioLibros = 200 ;
-
-    let valorLibros = precioLibros * carritoLibros ;
-    return valorLibros;
-}
-sumaLibros()
-
-function sumaTotal(){
-    let valorTotal = sumaLibros +sumaRevistas ;
-    return valorTotal
-}
-
-
-
-let compra = sumaTotal (sumaLibros + sumaRevistas);
-
-console.log("el valor total de la compra realizada es de $" + compra)
-console.log ("Muchas Gracias, por realizar la compra, espero que le guste.");
+alert("Muchas gracias por realizar su pedido")
 
 
